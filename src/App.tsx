@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import WeatherDataComponent from './components/WeatherData';
 
 const queryClient = new QueryClient();
 
@@ -44,8 +45,7 @@ function App() {
         </header>
         <main className="container mx-auto flex-grow px-4">
           <h2 className="text-3xl font-bold mt-6">Welcome to the Dashboard</h2>
-          <p className="text-lg mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex vel sem luctus, eu aliquam velit tincidunt. Donec eget diam commodo, ultricies augue nec, dictum mauris. Etiam volutpat tellus vel urna commodo, sed scelerisque urna interdum. Morbi porttitor imperdiet felis at tristique.</p>
-          <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded mt-6">Get Started</button>
+          <WeatherDataComponent />
         </main>
         <footer className="bg-gray-800 py-2">
           <div className="container mx-auto">
@@ -53,7 +53,6 @@ function App() {
           </div>
         </footer>
       </div>
-
     </QueryClientProvider>
   );
 }
